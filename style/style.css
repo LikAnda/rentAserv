@@ -1,0 +1,44 @@
+body {
+    width: 100%;
+    background-color: White;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #40B8FC;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+h2 {
+    text-align: center;
+}
+
+#onclick {
+    color: aquamarine;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.left-section {
+    display: flex;
+    padding-left: 30px;
+}
+
+.left-section h2 {
+    margin-right: 200px;
+}
+
+.right-section {
+    margin-left: auto;
+    padding-right: 30px;
+}
