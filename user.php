@@ -16,5 +16,11 @@
             <h2 id="onclick"><a href="user.php">Utilisateur</a></h2>
         </div>
     </header>
+
+    <h2>Pas encore de compte ?</h2>
+    <div class="contain-center">
+        <a class="button center-button" href="login.php">Login</a>
+        <a class="button center-button" href="register.php">Register</a>
+    </div>
 </body>
 </html>
