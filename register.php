@@ -8,18 +8,18 @@
 <body>
     <div class="wrapper">
         <h2>Créer un compte</h2>
-        <form action="#">
+        <form action="user.php" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Entrer votre pseudo" required>
+                <input type="text" name="re-username" id="re-username" placeholder="Entrer votre pseudo" required>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Entrer votre nom" required>
+                <input type="text" name="re-last-name" id="re-last-name" placeholder="Entrer votre nom" required>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Entrer votre prénom" required>
+                <input type="text" name="re-first-name" id="re-first-name" placeholder="Entrer votre prénom" required>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Entrer un mot de passe" required>
+                <input type="password" name="re-password" id="re-password" placeholder="Entrer un mot de passe" required>
             </div>
             <div class="input-box button">
                 <input type="Submit" value="S'enregistrer">

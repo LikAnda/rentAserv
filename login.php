@@ -8,12 +8,12 @@
 <body>
     <div class="wrapper">
         <h2>Connection</h2>
-        <form action="#">
+        <form action="user.php" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Entrer votre pseudo" required>
+                <input type="text" name="username" id="username" placeholder="Entrer votre pseudo" required>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Entrer votre mot de passe" required>
+                <input type="password" name="password" id="password" placeholder="Entrer votre mot de passe" required>
             </div>
             <div class="input-box button">
                 <input type="Submit" value="Se connecter">
