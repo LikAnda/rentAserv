@@ -66,10 +66,10 @@ if (isset($_POST['re-username']) && isset($_POST['re-password']) && isset($_POST
 
     <?php
     if(isset($_SESSION['user_id'])) {
-        echo "<h2>Vous êtes connecté(e) ! (User id: ".$_SESSION['user_id'].")</h2>";
-        echo "<h2>Nom d'utilisateur : ".$_SESSION['username']."</h2>";
-        echo "<h2>Nom : ".$_SESSION['last_name']."</h2>";
-        echo "<h2>Prénom : ".$_SESSION['first_name']."</h2>";
+        echo "<h2 class='align-center'>Vous êtes connecté(e) ! (User id: ".$_SESSION['user_id'].")</h2>";
+        echo "<h2 class='align-center'>Nom d'utilisateur : ".$_SESSION['username']."</h2>";
+        echo "<h2 class='align-center'>Nom : ".$_SESSION['last_name']."</h2>";
+        echo "<h2 class='align-center'>Prénom : ".$_SESSION['first_name']."</h2>";
 
         echo <<< HTML
         <div class="contain-center">
@@ -80,7 +80,7 @@ if (isset($_POST['re-username']) && isset($_POST['re-password']) && isset($_POST
         HTML;
     } else {
         echo <<< HTML
-        <h2>Pas encore de compte ?</h2>
+        <h2 class='align-center'>Pas encore de compte ?</h2>
         <div class="contain-center">
             <a class="button center-button" href="login.php">Login</a>
             <a class="button center-button" href="register.php">Register</a>
