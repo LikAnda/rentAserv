@@ -53,23 +53,26 @@ if (isset($_POST['re-username']) && isset($_POST['re-password']) && isset($_POST
     <link href="style/style.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="header">
+<header class="header">
         <div class="left-section">
-            <h2><a href="index.php">Accueil</a></h2>
-            <h2><a href="offers.php">Offres</a></h2>
-            <h2><a href="myserv.php">Mes Serveurs</a></h2>
+            <h2 class="nav-item"><a href="index.php">Accueil</a></h2>
+            <h2 class="nav-item"><a href="offers.php">Offres</a></h2>
+            <h2 class="nav-item"><a href="myserv.php">Mes Serveurs</a></h2>
         </div>
         <div class="right-section">
-            <h2 id="onclick"><a href="user.php">Utilisateur</a></h2>
+            <h2 id="onclick" class="nav-item"><a href="user.php">Utilisateur</a></h2>
         </div>
     </header>
 
     <?php
     if(isset($_SESSION['user_id'])) {
-        echo "<h2 class='align-center'>Vous êtes connecté(e) ! (User id: ".$_SESSION['user_id'].")</h2>";
-        echo "<h2 class='align-center'>Nom d'utilisateur : ".$_SESSION['username']."</h2>";
-        echo "<h2 class='align-center'>Nom : ".$_SESSION['last_name']."</h2>";
-        echo "<h2 class='align-center'>Prénom : ".$_SESSION['first_name']."</h2>";
+        echo "<div class='wrapper'>";
+        echo "<h2 class='wrapper-title'>Données utilisateur</h2>";
+        echo "<h3 class='wrapper-content'>ID de l'utilisateur : ".$_SESSION['user_id']."</h3>";
+        echo "<h3 class='wrapper-content'>Nom d'utilisateur : ".$_SESSION['username']."</h3>";
+        echo "<h3 class='wrapper-content'>Nom : ".$_SESSION['last_name']."</h3>";
+        echo "<h3 class='wrapper-content'>Prénom : ".$_SESSION['first_name']."</h3>";
+        echo "</div>";
 
         echo <<< HTML
         <div class="contain-center">
