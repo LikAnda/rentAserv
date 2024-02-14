@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,7 +16,13 @@
             <h2 class="nav-item"><a href="myserv.php">Mes Serveurs</a></h2>
         </div>
         <div class="right-section">
-            <h2 class="nav-item"><a href="user.php">Utilisateur</a></h2>
+            <?php
+            if(isset($_SESSION['user_id'])) {
+                echo "<h2 class='nav-item'><a href='user.php'>".$_SESSION['username']."</a></h2>";
+            } else {
+                echo "<h2 class='nav-item'><a href='user.php'>Utilisateur</a></h2>";
+            }
+            ?>
         </div>
     </header>
 
