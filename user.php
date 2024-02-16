@@ -50,7 +50,7 @@ if (isset($_POST['re-username']) && isset($_POST['re-password']) && isset($_POST
 <head>
     <meta charset="UTF-8">
     <title>rentAserv</title>
-    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/style.css" rel="stylesheet"/>
 </head>
 <body>
     <header class="header">

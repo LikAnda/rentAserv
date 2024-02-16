@@ -26,5 +26,22 @@ session_start();
         </div>
     </header>
 
+    <div class="card-container">
+        <div class="card">
+            <h2 class="card-title">WebCloud Lite</h2>
+            <p class="card-content">Marque : 2CRSI</p>
+            <p class="card-content">Processeur : Intel i3</p>
+            <p class="card-content">RAM : 16Go</p>
+            <p class="card-content">Stockage : 1024Go</p>
+            <p class="card-price">12€ par mois</p>
+        </div>
+        <div class="card">ITEM 2</div>
+        <div class="card">ITEM 3</div>
+        <div class="card">ITEM 4</div>
+        <div class="card">ITEM 5</div>
+        <div class="card">ITEM 6</div>
+        <div class="card">ITEM 7</div>
+    </div>
+
 </body>
 </html>
