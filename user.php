@@ -3,7 +3,6 @@ include "database.php";
 session_start();
 
 if (isset($_POST['username']) && isset($_POST['password'])) { // vérifier si les données du formulaire existe
-    echo "ISSET USERNAME AND PASSWORD";
     $username = $_POST['username'];
     $password = $_POST['password'];
 

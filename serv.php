@@ -47,13 +47,13 @@ session_start();
             } else {
                 echo "<h3 class='wrapper-price'>Prix: ".$donnees['Prix/Mois']."€ par mois</h3>";
                 echo "</div>";
-                echo <<< HTML
-                <div class="contain-center">
-                    <form action="myserv.php" method="POST">
-                        <input class="button" type="Submit" value="Louer">
-                    </form>
-                </div>
-                HTML;
+
+                echo "<div class='contain-center'>";
+                echo "<form action='myserv.php' method='POST'>";
+                echo "<input type='hidden' id='rentserv-id' name='rentserv-id' value='".$donnees['id']."'>";
+                echo "<input class='button' type='Submit' value='Louer'>";
+                echo "</form>";
+                echo "</div>";
             }
         } else {
             echo <<< HTML

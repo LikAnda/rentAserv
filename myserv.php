@@ -1,6 +1,16 @@
 <?php
 include "database.php";
 session_start();
+
+if (isset($_POST['rentserv-id'])) {
+    $serv_id = $_POST['rentserv-id'];
+
+    $requete = "UPDATE serveurs SET owner = ? WHERE id = ?";
+    $donnees = $bdd->prepare($requete);
+    $donnees->execute([$_SESSION['user_id'], $_POST['rentserv-id']]);
+    header("Location: {$_SERVER['REQUEST_URI']}", true, 303);
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
