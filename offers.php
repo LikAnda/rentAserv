@@ -1,6 +1,18 @@
 <?php
 include "database.php";
 session_start();
+
+if (isset($_POST['terminateserv-id'])) {
+    $serv_id = $_POST['terminateserv-id'];
+
+    $requete = "UPDATE serveurs SET owner = NULL WHERE id = ?";
+    $donnees = $bdd->prepare($requete);
+    $donnees->execute(array($_POST['terminateserv-id']));
+
+
+    header("Location: {$_SERVER['REQUEST_URI']}?terminate=true", true, 303);
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,6 +20,14 @@ session_start();
     <meta charset="UTF-8">
     <title>rentAserv</title>
     <link href="style/style.css" rel="stylesheet"/>
+    <script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get("terminate") === "true") {
+            alert("Résiliation réussie");
+        }
+    }
+    </script>
 </head>
 <body>
     <header class="header">
