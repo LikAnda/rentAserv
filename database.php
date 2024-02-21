@@ -11,7 +11,7 @@ function create_id($bdd, string $table) {
 }
 
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=rentaserv;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=rentaserv;charset=utf8', 'root', '');
 }
 catch(Exception $e) {
     die('Erreur : '.$e->getMessage());

@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <h2>Connection</h2>
+        <h2>Connexion</h2>
         <form action="user.php" method="POST">
             <div class="input-box">
                 <input type="text" name="username" id="username" placeholder="Entrer votre pseudo" required>

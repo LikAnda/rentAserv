@@ -13,7 +13,7 @@ session_destroy();
 </head>
 <body>
     <div class="wrapper">
-        <h2>Déconnection réussie !</h2>
+        <h2>Déconnexion réussie !</h2>
         <a class="button" href="index.php">Acceuil</a>
     </div>
 </body>

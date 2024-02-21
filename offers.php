@@ -1,4 +1,5 @@
 <?php
+include "database.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -27,20 +28,25 @@ session_start();
     </header>
 
     <div class="card-container">
-        <div class="card">
-            <h2 class="card-title">WebCloud Lite</h2>
-            <p class="card-content">Marque : 2CRSI</p>
-            <p class="card-content">Processeur : Intel i3</p>
-            <p class="card-content">RAM : 16Go</p>
-            <p class="card-content">Stockage : 1024Go</p>
-            <p class="card-price">12€ par mois</p>
-        </div>
-        <div class="card">ITEM 2</div>
-        <div class="card">ITEM 3</div>
-        <div class="card">ITEM 4</div>
-        <div class="card">ITEM 5</div>
-        <div class="card">ITEM 6</div>
-        <div class="card">ITEM 7</div>
+        <?php
+        $requete = "SELECT `id`, `Prix/Mois`, `nom`, `marque`, `processeur`, `RAM`, `stockage`, `operating_system`, `icon` FROM `serveurs` WHERE `owner` IS NULL";
+        $response = $bdd -> query($requete);
+        while ($donnees = $response->fetch()) {
+            echo '<div class="card" onclick="submitForm()">';
+            echo '<form id="cardForm" action="serv.php" method="GET">';
+
+            echo '<h2 class="card-title">'.$donnees['nom'].'</h2>';
+            echo '<p class="card-content">Marque : '.$donnees['marque'].'</p>';
+            echo '<p class="card-content">Processeur : '.$donnees['processeur'].'</p>';
+            echo '<p class="card-content">RAM : '.$donnees['RAM'].'Go</p>';
+            echo '<p class="card-content">Stockage : '.$donnees['stockage'].'Go</p>';
+            echo '<p class="card-price">'.$donnees['RAM'].'€ par mois</p>';
+
+            echo '<button class="card-button center-button" type="submit" id="id" name="id" value="'.$donnees['id'].'">Louer</button>';
+            echo '</form>';
+            echo '</div>';
+        }
+        ?>
     </div>
 
 </body>
