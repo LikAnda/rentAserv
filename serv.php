@@ -38,6 +38,7 @@ session_start();
             echo "<h2 class='wrapper-title'>".$donnees['nom']."</h2>";
             echo "<h3 class='wrapper-content'>ID du serveur : ".$donnees['id']."</h3>";
             echo "<h3 class='wrapper-content'>Marque : ".$donnees['marque']."</h3>";
+            echo "<h3 class='wrapper-content'>Système d'exploitation : ".$donnees['operating_system']."</h3>";
             echo "<h3 class='wrapper-content'>Processeur : ".$donnees['processeur']."</h3>";
             echo "<h3 class='wrapper-content'>Mémoire vive (RAM) : ".$donnees['RAM']."Go</h3>";
             echo "<h3 class='wrapper-content'>Stockage : ".$donnees['stockage']."Go</h3>";
@@ -45,7 +46,7 @@ session_start();
             if ($donnees['owner']) {
                 echo "<h3 class='wrapper-content'>ID du propriétaire : ".$donnees['owner']."</h3>";
             } else {
-                echo "<h3 class='wrapper-price'>Prix: ".$donnees['Prix/Mois']."€ par mois</h3>";
+                echo "<h3 class='wrapper-price'>Prix: ".$donnees['prix']."€ par mois</h3>";
                 echo "</div>";
 
                 echo "<div class='contain-center'>";

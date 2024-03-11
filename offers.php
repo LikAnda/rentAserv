@@ -49,7 +49,7 @@ if (isset($_POST['terminateserv-id'])) {
 
     <div class="card-container">
         <?php
-        $requete = "SELECT `id`, `Prix/Mois`, `nom`, `marque`, `processeur`, `RAM`, `stockage`, `operating_system`, `icon` FROM `serveurs` WHERE `owner` IS NULL";
+        $requete = "SELECT `id`, `prix`, `nom`, `marque`, `processeur`, `RAM`, `stockage`, `operating_system`, `icon` FROM `serveurs` WHERE `owner` IS NULL";
         $response = $bdd -> query($requete);
         while ($donnees = $response->fetch()) {
             echo '<div class="card" onclick="submitForm()">';
@@ -57,10 +57,11 @@ if (isset($_POST['terminateserv-id'])) {
 
             echo '<h2 class="card-title">'.$donnees['nom'].'</h2>';
             echo '<p class="card-content">Marque : '.$donnees['marque'].'</p>';
+            echo "<p class='card-content'>Système d'exploittaion : ".$donnees['operating_system']."</p>";
             echo '<p class="card-content">Processeur : '.$donnees['processeur'].'</p>';
             echo '<p class="card-content">RAM : '.$donnees['RAM'].'Go</p>';
             echo '<p class="card-content">Stockage : '.$donnees['stockage'].'Go</p>';
-            echo '<p class="card-price">'.$donnees['RAM'].'€ par mois</p>';
+            echo '<p class="card-price">'.$donnees['prix'].'€ par mois</p>';
 
             echo '<button class="card-button center-button" type="submit" id="id" name="id" value="'.$donnees['id'].'">Louer</button>';
             echo '</form>';
