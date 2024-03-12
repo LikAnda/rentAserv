@@ -25,6 +25,12 @@ session_start();
             ?>
         </div>
     </header>
+    
+    <div class="main-content">
+        <h1>Bienvenue sur rentAserv</h1>
+        <p class="text"><b>rentAserv</b> est une plateforme de location de serveurs dédiés. Que vous ayez besoin d'un serveur pour héberger un site web, exécuter des applications ou effectuer des calculs intensifs, nous avons ce qu'il vous faut.<br>Nos serveurs sont puissants, fiables et flexibles, et notre équipe est là pour vous aider à trouver la solution la mieux adaptée à vos besoins.</p>
+        <p class="text">Parcourez nos offres et trouvez le serveur parfait pour votre projet. Louez dès aujourd'hui et bénéficiez d'une infrastructure de qualité professionnelle à un prix abordable.</p>
+    </div>
 
 </body>
 </html>
