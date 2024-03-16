@@ -33,8 +33,8 @@ session_start();
     </div>
     <br>
     <div class="center">
-        <h3>Repo GitHub : <a href="https://github.com/LikAnda/rentAserv" target="_blank">https://github.com/LikAnda/rentAserv</a></h3>
-        <img class="center" src="db-schem.png" alt="Image" height="600" width="800">
+        <h3>Repo GitHub : <a class="link" href="https://github.com/LikAnda/rentAserv" target="_blank">https://github.com/LikAnda/rentAserv</a></h3>
+        <a href="temp-database.sql" download="rentAserv_temp-db.sql"><img class="center" src="db-schem.png" alt="Image" height="600" width="800" alt="Télécharger template de la base de données"></a>
     </div>
 
 </body>
